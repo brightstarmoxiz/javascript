@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <button onclick="method()">click here</button>
+    <input type="text" id="me">
+    <input type="text" id="my">
+    <input type="text" id="urs">
+</body>
+<script>
+    function method(params) {
+        let name=document.getElementById('me').value
+        let now=document.getElementById('my').value.split(",")
+        document.getElementById('urs').value= name.substring(now [0], now[1])
+
+    }
+</script>
+</html>

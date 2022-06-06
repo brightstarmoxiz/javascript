@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .orgdiv{
+        display: none;
+    }
+</style>
+<body style="background: black;"> 
+    <h2 style="color: cornsilk;">Welcome to brightstar game</h2>
+    <strong style="color: cornsilk;"> Help</strong> <span style="color: cornsilk;"> choose an input number from 1 to 20, click the button to start game</span>
+    <div><input type="number" placeholder="choose a number" id="choosen"></div>
+    <br>
+    <button onclick="screening()" style="color: darkgreen;"> start game</button>
+  
+   <br><br>
+   <span style="color: cornsilk;"><b style="color: cornsilk;">Next</b>: write your on name in the input box, click on the button, continue playing</span>
+    <div style="display: flex;  " id="orgdiv">
+    <div style="border:2px solid green; width: 40%;background-color:darkorchid;">
+    <input style="border: 2px solid black; color:blueviolet;font-size: larger;font-weight: 100; margin-left:30px; margin-top: 4px;" placeholder="brightstar" id="firstinput">
+    
+    <div>
+        <br>
+    <button onclick=star() style="padding: 1%;color: rgb(56, 51, 41);background-color: indianred;margin-left:50px" >input name</button>
+    <h3 id="output1" style="color:orangered; text-align: center;">
+        
+    </h3>
+   </div>
+  
+   <h3 id="them" style="text-align: center;color: hotpink;font-size: larger;"></h3>
+   <button onclick= "playbtt()" style="background-color: chartreuse;width: 8%;padding: 10px; margin-top: 100px;border: none;" id="mrplay">play</button>
+    </div>
+   <div style="border: 2px solid green;width: 40%;background-color:darkorchid;"> 
+    <input style="border: 2px solid black; color:darkred;font-size: larger;font-weight: 100; margin-left:30px; margin-top: 4px;" placeholder="moxiz" id="secondinput">
+   
+    <div>
+    
+    <button onclick="star()" style="padding: 1%;color: floralwhite;background-color: indianred; margin-left: 50px;" >input name</button>
+    <h3 id="output2" style="color:saddlebrown; text-align: center;">
+
+    </h3>
+    </div>
+<h3 id="demo" style="text-align: center;color:saddlebrown;font-size: larger";></h3>
+<button onclick= "playbtt2()" style="background-color: chartreuse;width: 8%;padding: 10px; margin-top: 100px; border: none;" id="mrplay2">play</button>
+</div>
+</div>
+<br>
+<div id="answer" style="border: 1px solid darkblue;height: 20vh; width: 50%;text-align: center;color:maroon;background-color: greenyellow;">
+    
+
+</div>
+<a href="new table.html"> <button style="background-color: goldenrod;color: honeydew; border: none;padding: 10px; margin-left: 20%;;">restart</button></a>
+</body>
+<script>
+    let tolu= document.getElementById(`output1`)
+    let bolu= document.getElementById(`output2`)
+    let firstname = document.getElementById(`firstinput`)
+    let secondname = document.getElementById(`secondinput`)
+    let result = document.getElementById (`answer`)
+    let realnum =document.getElementById(`choosen`)
+    let firstplay = document.getElementById(`mrplay`)
+    let secondplay = document.getElementById(`mrplay2`)
+    let outputnum= document.getElementById(`them`)
+    let outputnum2= document.getElementById(`demo`)
+
+
+    firstplay.disabled = true
+    secondplay.disabled = true
+
+    function screening() {
+        document.getElementById("orgdiv").style.display = "flex";
+        if (realnum.value !=""){
+            firstplay.disabled = false 
+            secondplay.disabled = false 
+        }
+
+    }
+    
+    function star() {
+        tolu.innerHTML= firstname.value
+        bolu.innerHTML = secondname.value
+    }
+
+    // function getRndInteger(min, max) {
+    //   return Math.floor(Math.random() * (max - min)) + min;
+    //   if (getRndInteger == Number (realnun.value)) {
+    //       result.innerHTML = `<h2> CONGRATULATION !! ${firstname.value}. You won the game </h3>`
+    //         return
+    //   }
+    // }
+   
+    function playbtt(params) {
+        let randomNo = genRand()
+        outputnum.innerHTML= randomNo
+        if (randomNo == Number(realnum.value))
+        {
+        result.innerHTML = `<h3> CONGRATULATION !! ${firstname.value}. You won </h3>`
+        return
+    }
+    if (firstplay.onclick) {
+        firstplay.disabled = true;
+        secondplay.disabled = false;
+    }
+    }
+    function playbtt2(params) {
+        let randomNo = genRand()
+        outputnum2.innerHTML= randomNo
+        if (randomNo == Number(realnum.value))
+        {
+        result.innerHTML = `<h3> CONGRATULATION !! ${secondname.value}. You won </h3>`
+        return
+    }
+    if (secondplay.onclick) {
+        firstplay.disabled = false;
+        secondplay.disabled = true;
+    }
+    // else if (result.innerHTML.onclick){
+    // firstplay.disabled = true;
+    //     secondplay.disabled = true;
+    // }
+    }
+
+    function genRand() {
+        return `${Math.floor(Math.random() * 20)}`;
+    }
+    </script> 
+
+</html>

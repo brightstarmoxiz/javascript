@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="bright()"> calculate</button>
+   <input id="water" type="number"> 
+   <input  id="sun">
+   <input id="thin" type="number">
+   <p id="me">Output</p>
+</body>
+<script>
+function bright() {
+    let laugh1 = Number(document.getElementById(`water`).value);
+    let laugh2 = document.getElementById(`sun`).value;
+    let laugh3 = Number(document.getElementById(`thin`).value)
+    let laugh4;
+    
+
+   if(laugh2 == `+`){
+       laugh4 = laugh1 + laugh3;
+   }
+   else if (laugh2 == "-") {
+       laugh4 = laugh1 - laugh3;
+   }
+
+   else if (laugh2 == "/") {
+       laugh4 = laugh1 / laugh3;
+   }
+
+   else if (laugh2 == "*") {
+       laugh4 = laugh1 * laugh3;
+   }
+
+   else {
+       laugh1.value = ""
+       laugh2.value = ""
+       laugh3.value = ""
+   }
+   document.getElementById("me").innerHTML = laugh4
+} -->
+
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(",");
+
+  document.getElementById("demo").innerHTML = arr[0];
+}
+</script>
+</html>

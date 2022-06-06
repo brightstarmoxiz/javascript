@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./java.js"></script>
+</head>
+<body>
+    <button onclick="hey()" onmouseout="hi()" style="background-color: blueviolet; border:none;
+    color:white;width: 20%;padding: 10px;">hello</button>
+    <p id="hey" style="color: hotpink;"></p>
+
+      <button onclick="star()" onmouseover="moon()" style="background-color: blueviolet; border:none;
+      color:white;width: 20%;padding: 10px;">if u need me click on me</button>
+     <a href="./java.html"> <p id="star"></p></a>
+
+    
+
+    
+         <button onclick="myImage()">Turn on the light</button>
+    
+    <img id="myImage" src="../myjavscrp.js/pic_bulboff (1).gif" style="width:100px">
+    
+    <button onclick="mylife()">Turn off the light</button>
+    
+
+    
+</body>
+<script>
+
+
+     function hey(params) {
+         document.getElementById (`hey`).innerHTML = `This is brightstar`
+     };
+
+     function hi(params) {
+         document.getElementById (`hey`).innerHTML = ``
+     };
+     function star(params) {
+        document.getElementById (`star`).innerHTML='http.//.www.brightstarmoxiz.com'
+         
+     };
+     function moon(params) {
+         document.getElementById (`star`).innerHTML = ``
+     };
+
+
+// bulb light
+function myImage(params) {
+    document.getElementById('myImage').src=`../myjavscrp.js/pic_bulbon.gif`
+     };
+     function mylife(params) {
+        document.getElementById('myImage').src=`../myjavscrp.js/pic_bulboff (1).gif`
+     };
+
+    //  function
+
+     function sum(num,nim2,num3,num4,) {
+         alert(num+nim2*num3-num4-num5)
+     }
+     sum(10,20,19,20,)
+
+
+
+    function greet(my,me,a) {
+        alert(my+me+a)
+    }
+    greet(`hello,you are welcome`, ` brightstar`, ` mozix `)
+
+
+  
+</script>
+
+
+</html>

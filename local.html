@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:darkblue;">
+    <h2>The window object</h2>
+    <h3>The localStorage property</h3>
+
+    <p><button onclick="clickcounter()" type="button"> click on me!</button></p>
+    <p>Number of clicks:</p>
+    <p id="moxiz"></p>
+    <p>click the button to see the counter increase.</p>
+<p> close the browser tab (or window) , and try again , and the counter will continue to count (is not reset).</p>
+<script>
+    //  clickcounter();
+
+    //  function clickcounter() {
+    //    if  (localStorage.clickcounter) {
+    //         localStorage.clickcounter = Number(localStorage.clickcounter)+1;
+    //    }
+    //    else {
+    //        localStorage.clickcounter = 0;
+    //    }
+    //    document.getElementById("moxiz").innerHTML = localStorage.clickcounter;
+    //  }
+    let flav = [{name: 'brightstar', age: '29', status: 'cool' },
+ {name: 'bright', age: '29',status: 'rich' },
+ {name: 'brigh', age: '29', status:'precious' },
+ {name: 'bstar', age: '9', status: 'nice' },
+ {name: 'star', age: '20', status: 'normal' }]
+      localStorage.setItem("brightstar", JSON.stringify(flav))
+      let scream = localStorage.getItem("brightstar")
+      console.log(JSON.parse(scream));
+      
+
+</script>
+</body>
+</html>

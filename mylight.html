@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- <button onclick="greet()">click on me</button>
+    <input type="text" id="mylife">
+    <input type="text" id="honey">
+    <input type="text" id="hot">
+    <input type="text" id="tea">
+<br> -->
+    <button onclick="bright()">click on me</button>
+    <input type="number" id="h">
+    <input type="" id="honey" > 
+    <input type="number" id="hot" >
+   <p id="output">ans</p>
+<!-- <br>
+    <button onclick="uwuw()">click on me</button>
+    <input type="text" id="mysweetheart">
+    <input type="text" id="myeggroll"> --> 
+</body>
+<script>
+//     let name="will u like to agree to our terms and serves ; hmmm...";
+//  let num="will love scannming ur code";
+//  let boy="we promise you 50k for more referer";
+//  let m="hope you hate football"
+ 
+//      alert(name)
+//      alert(num)
+//      alert(boy)
+//      alert(m)
+  //    function greet() {
+  //      let pal=document.getElementById ('myname') 
+  //      let pal1=document.getElementById('myna')
+  //   pal1.value = pal.value
+  //   pal.value =''
+      
+  // }
+  // // cbvcbcbcbcb
+  // function kosi() {
+  //      let val=document.getElementById ('mylife') 
+  //      let val1=document.getElementById('honey')
+  //   val1.value = val.value
+  //   val.value =''
+      
+  // }
+
+  // // fhgvhghfhf
+  // function uwuw() {
+  //      let kal=document.getElementById ('mysweetheart') 
+  //      let kal1=document.getElementById('myeggroll')
+  //   kal1.value = kal.value
+  //   kal.value =''
+      
+  // }
+  </script>
+  <script>
+
+  let r=200;
+  if (r==200) {
+    alert ('Hello world')
+  }
+  if (r <200){
+    alert('d world is me')
+
+  }
+  else (r!=300) 
+    alert('hey babe')
+  
+
+    function bright() {
+       let val3=Number(document.getElementById ('h').value) 
+       let val1=document.getElementById('honey').value;
+       let val2=Number(document.getElementById(`hot`).value)
+       let output;
+      
+    
+   
+   if(val1=="+"){
+   output = val3 + val2
+   
+   }
+   else if(val1=="-"){
+   output = val3 - val2
+   
+   }
+   else if(val1=="*"){
+   output = val3 * val2
+   
+   }
+   else if(val1=="/"){
+   output = val3 / val2
+   
+   }
+  
+   else{
+     val3.value-""
+     val1.value-""
+     val2.value-""
+   }
+document.getElementById("output").innerHTML = output
+  }
+  
+     </script>

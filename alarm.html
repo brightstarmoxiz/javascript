@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div style="background-color: burlywood;margin: auto;width: 40%;height: 75vh;">
+    <div style="display: flex; margin:auto;padding: 20px;width: 190px;">
+<div style="background-color: blue;padding: 30px; width: 10px; font-size: 200%;font-weight: 700;" id="hour"></div>
+<div style="background-color: white;padding: 30px; width: 10px; font-size: 200%;font-weight: 700;" id="minute"></div>
+<div style="background-color: blue;padding: 30px; width: 10px; font-size: 200%;font-weight: 700;" id="seconds"></div>
+</div>
+<div style="display: flex;padding: 40px;">
+<button>input hour</button><input type="number" id="tip">
+<button>input minute</button><input type="number" id="lin">
+<audio src="C:\Users\MOSES\Documents\Asa - My Valentine.mp3"id="song">
+
+</audio>
+</div>
+<button onclick="alamsetting()">set alarm</button>
+<button onclick="alamreset()">reset alarm</button>
+   </div> 
+   <script>
+      let myhour = document.getElementById('hour')
+       let Minute = document.getElementById('minute')
+       let seconds = document.getElementById('seconds')
+       let input1 = document.getElementById('tip')
+       let input2 = document.getElementById('lin')
+       let mysong = document.getElementById('song')
+       let wow = []
+    //    let wow = []
+       function ahour() {
+       let happydate = new Date()
+       myhour.innerHTML = happydate.getHours()
+           let COOLdate = new Date()
+        Minute.innerHTML = COOLdate.getMinutes()
+           let swdate = new Date()
+          seconds.innerHTML = swdate.getSeconds()
+               
+       if(input1.value== myhour.innerHTML && input2.value== Minute.innerHTML) {
+           mysong.play()
+
+           sweet()
+       }
+       
+       };
+
+       ahour();
+           setInterval(ahour,1000);
+
+       
+
+  function alamsetting(){
+
+   if (input1 != ""&& input2 !=""){
+
+      if (input1.value !="" && input2 !="" ){
+ input1.disabled=true
+ input2.disabled=true
+ 
+}
+
+}
+       }
+
+       function alamreset(params) {
+           input1.value =""
+           input2.value =""
+           input1.disabled = false
+           input2.disabled = false
+           mysong.pause()
+       }
+       if (JSON.stringify('water')) {
+           console.log('correct');
+           
+          wow= JSON.parse(localStorage.getItem(`water`));
+          
+       } 
+       
+       function sweet() {
+           localStorage.setItem('water', JSON.stringify(wow))
+           obj = {bright:input1.value,star:input2.value}
+           wow.push(obj) 
+           let joy =localStorage.getItem('water')
+         
+         sweet() 
+          // console.log(JSON.parse(joy))
+       }
+      
+      
+        
+       
+        
+   </script>
+
+</body>
+</html>

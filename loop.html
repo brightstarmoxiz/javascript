@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>The multipiication table</h2>
+
+  <div id="me" style="display: flex; flex-wrap: wrap;"></div>
+<p id="wow" style="display: flex; flex-direction: column;"></p>
+
+  <button onclick="moxiz(`wow`)"> click on your choice</button>
+  <input type="text " id="check" name="">
+  <input type="text " id="checkoff" name="">
+  <script>
+    function moxiz() {
+      document.getElementById(`me`).innerHTML = ""
+     
+      let a = document.getElementById(`check`).value
+      let b = document.getElementById(`checkoff`).value
+      for (a = a; a <= b; a++)
+        for (let multiply = 1; multiply < 13; multiply++) {
+          document.getElementById(`me`).innerHTML += a + " x " + multiply + "" + " = " + (Number(a) * multiply) + " </br> <br> "
+         
+        
+        }
+      //   {
+      //   a[b].style.msflex = "3";
+      //   a[b].style.webflex = "3";
+      //   a[b].style.flex = "4";
+      // }
+    }
+//     for (let multiply = 1; multiply < 13; multiply++) {
+//     document.getElementById(`me`).innerHTML += 3 +"x" + multiply + "" + "=" + (Number(3) * multiply) + " </br> <br>"
+//     }
+//     for (let multiply = 1; multiply < 13; multiply++) {
+//     document.getElementById(`me`).innerHTML += 4 +"x" + multiply + "" + "=" + (Number(4) * multiply) + " </br> <br>"
+//     }
+//     for (let multiply = 1; multiply < 13; multiply++) {
+//     document.getElementById(`me`).innerHTML += 5 +"x" + multiply + "" + "=" + (Number(5) * multiply) + " </br> <br>"
+//       }
+//   }
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: brown;">
+    <style>
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      color: cornsilk;
+    }
+    
+    h3,p{
+        color: cornflowerblue;
+    }
+    
+        
+    </style>
+    <h3>This is place where you can register your vote, pls follow the instruction to be registered</h3>
+    <p>Just input your original name and number then tap the button to get registered</p>
+  <input style="padding: 10px;" type="text" placeholder="input text" id="letter">
+
+  <input style="padding: 10px;" type="number" placeholder="input number" id="num">
+
+  <button onclick="tap()">tap</button>
+<br><br>
+  <!-- <table id="tab"></table> -->
+  <div id="tab"></div>
+  
+  <script>
+     let firsttext= document.getElementById(`letter`)
+     let firstnum= document.getElementById(`num`)
+     let display= document.getElementById(`tab`)
+     let data= [];
+    if (localStorage.getItem(`cool`)) {
+       console.log("yes");
+       data = JSON.parse(localStorage.getItem(`cool`)); 
+    } else{
+        data=data;
+    }
+     function dim() {
+        //  let showdata=''
+        //  let showup={
+        //       text:firsttext.value, 
+        //      figure:firstnum.value 
+        //  }
+           display.innerHTML=""
+        for (let index =0; index < data.length; index++)
+        {
+             let a =`<table>
+            <td>${index+1}</td>
+                <td>${data[index].name}</td>
+                 <td>${data[index].number}</td>
+                <td> <button onclick="btt(${index})"> Delete</button></td>
+                <td> <button onclick="bt(this)"> Edit</button></td>
+                 <td style="display:none"> <button onclick="b(this)"> Save</button></td>
+                </table>`
+            firsttext.value =""
+             firstnum.value = ""
+            display.innerHTML +=a; 
+           
+        }
+        console.log(data);
+        moxiz()
+    }
+    function moxiz() {
+        localStorage.setItem(`cool`,JSON.stringify(data))
+        let gold = localStorage.getItem(`cool`)
+     ; console.log(JSON.parse(gold))
+    }
+    
+    
+function tap(params) {
+    
+
+         if (firsttext.value=='' && firstnum.value=='' || firsttext.value==''  && firstnum.value!==''|| firsttext.value!=='' && firstnum.value=='') 
+         {
+             return;
+            } 
+        //  for (let index= 0; index < data.length; index++){
+        //      if (firsttext.value == data[index].text && firstnum.value == data[index].figure) {
+        //           alert(' exit')
+        //          return;
+        //      }
+        //  }
+        let newdata = {
+            name: firsttext.value,
+            number: firstnum.value
+        }
+         data.push(newdata)
+         dim ();
+         
+    }
+                // showdata+=a
+                // firsttext.value=''
+                //  firstnum.value=''
+         
+         display.innerHTML=data;
+
+     
+     function btt(index) {
+         data.splice(index,1)
+         
+        dim()
+
+     }
+     function bt(added){
+   added.parentElement.parentElement.children[1].setAttribute("contenteditable",true)
+   added.parentElement.parentElement.children[2].setAttribute("contenteditable",true)
+//  if (bt.onclick) {
+//      added.disabled=false
+//      added.disabled = true
+//    }
+added.parentElement.parentElement.children[5].style.display="inherit"
+     }
+     function b(added){
+   added.parentElement.parentElement.children[1].setAttribute("contenteditable",false)
+   added.parentElement.parentElement.children[2].setAttribute("contenteditable",false)
+  //   if (.onclick) {
+  //    added.disabled = true
+  //  added.disabled= false
+  //  }
+  added.parentElement.parentElement.children[5].style.display="none"
+     }
+     dim()
+    //  data destruction class
+    // let darray =["wole",23,6,null,90]
+    // let objs = {name:"brighhtstar", age:10, email:"mail.com", hobbies:["swimming","reading","writing"]};
+    // let {name:fname,email,hobbies:[,,br]}= objs
+    // let [dd,,,,ni] = darray
+    // console.log(br);
+
+    // // spread operator
+    // darray =[...darray, ...objs.hobbies]
+    // console.log(objs);
+
+    // function jimk(...params) {
+    //     console.log(params);
+    // }
+    // jimk(2,3,4)
+
+
+    // let scream ={weight:"70okg", height:"6.0feet", qualification:"b.sc"}
+    // function egg({weight,qualification}) {
+    //     console.log(weight,qualification);
+    // }
+    // egg(scream)
+
+     
+  </script>
+ 
+</body>
+</html>

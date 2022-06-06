@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        button:hover {
+            background: linear-gradient(to right, blue, deeppink) !important;
+
+            /* background: orange !important; */
+        }
+    </style>
+    <div style="background-color: black;height: 60vh;width:28%;margin: auto;">
+        <p style="color: white;">Calculator</p>
+        <strong
+            style="margin:20%;color: white;font-size: larger;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Standard</strong>
+
+
+        <div
+            style="   border: 1px solid white; height: 4vh;margin: auto;color: white; display: flex;flex-direction:row-reverse ;margin-top: 2%; border-bottom: none; ">
+            <p id="water"></p>
+        </div>
+        <div
+            style="   border: 1px solid white; height: 10vh;margin: auto;color: white; display: flex;flex-direction:row-reverse ;margin-top: 2%; border-top: none;">
+            <h1 id="life"></h1>
+        </div>
+        <div style="background-color:blanchedalmond; display: flex;justify-content: space-around;padding: 10px;">
+            <span>MC</span>
+            <span>MR</span>
+            <span>M+</span>
+            <span>M-</span>
+            <span>MC</span>
+        </div>
+        <div style="background-color: white;;">
+            <div>
+                <button onclick="opera(`%`)" style="padding: 25px; width: 24%;background-color: black;border: none;color: white;">%</button>
+                <button style="padding: 25px; width: 24%;background-color: black;border: none;color: white;">CE</button>
+                <button onclick="fire()"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;color: white;">C</button>
+                <button onclick="star()"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;color: white;"
+                    id="water">!</button>
+            </div>
+            <div>
+                <button onclick="love(params)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;"><SUP>1</SUP>
+                    /<sub>X</sub></button>
+                <button onclick="secondNo()"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;"><sub>x</sub>
+                    2</button>
+                <button onclick="love(`/`)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;"><sub>2</sub>^</button>
+               
+                <button onclick="opera(`/`)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;">/</button>
+            </div>
+            <div>
+                <button onclick="love(9)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+                    >9</button>
+                <button onclick="love(8)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+                   >8</button>
+                <button onclick="love(7)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+                    >7</button>
+                <button onclick="opera(`*`)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;">x</button>
+            </div>
+            <div>
+                <button onclick="love(6)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color:white;"
+                   >6</button>
+                <button onclick="love(5)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+                   >5</button>
+                <button onclick="love(4)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+                   >4</button>
+                <button onclick="opera(`-`)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;">-</button>
+            </div>
+            <div>
+                <button onclick="love(3)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color:white;"
+                   >3</button>
+                <button onclick="love(2)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color:white;"
+                   >2</button>
+                <button onclick="love(1)"
+                    style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color:white;"
+                  >1</button>
+
+                <button onclick="opera(`+`)"
+                    style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color:white;">+</span></button>
+            </div>
+
+            <button
+                style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%;color: white;"><SUP>+</SUP>
+                /<sub>-</sub></button>
+            <button onclick="love(0)"
+                style="padding: 25px; width: 24%;background-color: darkblue;border: none;margin-top: 1%;color: white;"
+               >0</button>
+            <button onclick="love(`.`)"
+                style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%; color: white;">.</button>
+            <button onclick="bright() "
+                style="padding: 25px; width: 24%;background-color: black;border: none;margin-top: 1%; color: white;">=</button>
+        </div>
+    </div>
+    <!-- <div style="height: 500px; width: 500px;border: 1px solid purple; background:linear-gradient( to right,blue,red)!important ; "></div> -->
+</body>
+<script>
+    let firstvalue 
+    let secondvalue  
+    let thirdvalue  
+    let secondnum = document.getElementById(`life`)
+    let firstnum = document.getElementById(`water`)
+
+    function love(value)  {
+        secondnum.innerHTML += value;
+        
+    }
+    function star() 
+       { firstnum.innerHTML=``;
+        
+    }
+    function fire() {
+        firstnum.innerHTML=``;
+        secondnum.innerHTML=``;
+    }
+    function opera(secondNo) {
+        firstvalue = secondnum.innerHTML
+        firstnum.innerHTML += `${firstvalue} ${secondNo}`;
+        secondnum.innerHTML =``;
+        thirdvalue = secondNo;
+    }
+    function bright(plenty) {
+        if (thirdvalue == "+"){
+        firstnum.innerHTML += secondnum.innerHTML
+        secondnum.innerHTML = Number(firstvalue) + Number(secondnum.innerHTML);
+
+    }
+    else if (thirdvalue == "-"){
+        firstnum.innerHTML += secondnum.innerHTML
+        secondnum.innerHTML = Number(firstvalue) - Number(secondnum.innerHTML);
+
+    }
+    else if (thirdvalue == "*"){
+        firstnum.innerHTML += secondnum.innerHTML
+        secondnum.innerHTML = Number(firstvalue) * Number(secondnum.innerHTML);
+
+    }
+    else if (thirdvalue == "/"){
+        firstnum.innerHTML += secondnum.innerHTML
+        secondnum.innerHTML = Number(firstvalue) / Number(secondnum.innerHTML);
+
+    }
+    else if (thirdvalue == "%"){
+        firstnum.innerHTML += secondnum.innerHTML
+        secondnum.innerHTML = Number(firstvalue) % Number(secondnum.innerHTML);
+
+    }
+}
+    function total(params) {
+        bright()
+    }
+   
+
+
+</script>
+
+</html>

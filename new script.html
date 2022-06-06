@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="air"></p>
+  
+</body>
+<script>
+    // let a = [1,3,5,2,6,7,11,13,17,19,20,23];
+   
+    //   for (let i = 0; i < a.length; i++) {
+    //      if (a[i] /1 == a [i] && a[i] % 2 !== 0 && a[1] % 5 !== 0 && a[i] % 7 !== 0 )  {
+    //         console.log(a[i]);
+    //      }
+          
+    //   }  
+    //   let a = [1,3,5,2,6,7,11,13,17,19,20,23];
+   
+    //   for (let i = 0; i < a.length; i++) {
+    //       if (a [i] % 2 == 0) {
+    //         console.log(a[i]);  
+    //       }
+      
+    //   }
+    // let lovly = [`brightstar`,'moses','starboy','lover']
+    // lovly.forEach(function(element,index) {
+    //     console.log(element,index);
+    // } );
+ let flav = [{name: 'brightstar', age: '29', status: 'cool' },
+ {name: 'bright', age: '29',status: 'rich' },
+ {name: 'brigh', age: '29', status:'precious' },
+ {name: 'bstar', age: '9', status: 'nice' },
+ {name: 'star', age: '20', status: 'normal' }]
+// let sweet = flav.map(function (watt) {
+//     return `${watt.age}`
+// ;}) 
+let me = flav.find(function (wave) {
+   return wave.age == 29
+})
+console.log(me);
+</script>
+</html>
